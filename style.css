@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Primary Colors */
+    --my-violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+
+    /* Headings:-
+    - font-family: 'Poppins', sans-serif;
+    - Weights: 400, 600
+    */
+
+    /* Body:-
+    font-family: "Open Sans", sans-serif;
+    - Weights: 400
+    */
+
+    /*
+    ## Icons
+    For the social icons, you can use a font icon library.
+    Some suggestions can be found below:
+    - [Font Awesome](https://fontawesome.com/)
+    - [IcoMoon](https://icomoon.io/)
+    - [Ionicons](https://ionicons.com/)
+    */
+}
+body{
+    height: 100vh;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: var(--my-violet);
+    font-family: "Open Sans", sans-serif;
+}
+section{
+    height: 100%;
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url(images/bg-desktop.svg);
+    background-size: calc(cover - 5px);
+    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+    background-color: var(--my-violet);
+    overflow: hidden;
+}
+.top{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.top img{
+    width: 12%;
+}
+.center{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    font-family: "Open Sans", sans-serif;
+    margin-left: 15px;
+}
+.top,
+.left,
+.right{
+    padding: 10px;
+}
+.right{
+    width: 95%;
+}
+.contact{
+    color: white;
+}
+.heading{
+    margin: 20px;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.para{
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+button {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-left: 20px;
+    padding: 13px 63px;
+    border-radius: 50px;
+    color: var(--my-violet);
+    background-color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    color: white;
+    transform: translateY(-2px);
+    background-color: var(--soft-magenta);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+.center img{
+    width: 95%;
+}
+.bottom {
+    gap: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 60px 15px;
+    justify-content: flex-end;
+}
+.bottom a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    text-decoration: none;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+}
+.bottom a i {
+    font-size: 16px;
+}
+.bottom a:hover {
+    color: var(--soft-magenta);
+    border-color: var(--soft-magenta);
+    transform: scale(1.1);
+}
+::selection {
+    color: var(--my-violet);
+    background-color: var(--soft-magenta);
+}
+@media (min-width: 930px) and (max-width: 1030px) {
+    .heading {
+        font-size: 34px;
+    }
+    .para{
+        font-size: 14px;
+    }
+    button {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    .top img{
+        width: 18%;
+    }
+}
+@media (min-width: 769px) and (max-width: 930px) {
+    .heading {
+        font-size: 26px;
+    }
+    .para{
+        font-size: 14px;
+    }
+    button {
+        font-size: 10px;
+        margin-left: 20px;
+    }
+    .top img{
+        width: 18%;
+    }
+}
+@media (max-width: 768px) {
+    body{
+        height: 160vh;
+    }
+    section {
+        padding: 20px;
+        flex-direction: column;
+        background-size: contain;
+        background-image: url(images/bg-mobile.svg);
+    }
+
+    .top{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .center {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .heading {
+        font-size: 24px;
+    }
+    
+    .para {
+        font-size: 14px;
+    }
+    
+    button {
+        margin: 0;
+        padding: 12px 40px;
+        font-size: 14px;
+        width: 70%;
+    }
+
+    .bottom {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .top img {
+        width: 150px;
+    }
+}
+
+/* @media (max-width: 480px) {
+    .heading {
+        font-size: 24px;
+    }
+
+    .para {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 30px;
+        font-size: 13px;
+    }
+} */
